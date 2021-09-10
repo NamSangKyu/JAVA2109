@@ -34,7 +34,9 @@ public class Operator1 {
 		System.out.println(result);
 
 		// n1 + n2 * 3 출력 - result 사용 X
+		System.out.println(n1 + n2 * 3);
 		// (n1 + n2) * 3 출력 - result 사용 X
+		System.out.println((n1 + n2) * 3);
 		
 	}
 
