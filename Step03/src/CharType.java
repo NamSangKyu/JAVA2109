@@ -16,6 +16,14 @@ public class CharType {
 		System.out.println(ch2);
 		System.out.println(n2);
 		
+		char ch3 = '가';
+		int n3 = ch3;
+		System.out.println(ch3);
+		System.out.println(n3);
+		
+		int 점수 = 100;
+		System.out.println(점수 * 2);
+		
 	}
 
 }
