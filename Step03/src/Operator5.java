@@ -16,6 +16,10 @@ public class Operator5 {
 		System.out.println(n1 > 10 && n1 < 30);
 		//OR 연산
 		System.out.println(n1 > 10 || n1 == n2 );
+		//NOT 연산
+		boolean flag = n1 > 10 || n1 == n2 ;
+		System.out.println(flag);
+		System.out.println(!flag);
 	}
 
 }
