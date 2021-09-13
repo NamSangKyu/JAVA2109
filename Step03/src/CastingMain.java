@@ -12,9 +12,16 @@ public class CastingMain {
 		int r = 3;
 		double area = 0.0;
 		
-		area = 3 * 3 * 3.1415;
+		//자동으로 형변환 됨
+		//작은 개념이 큰개념, 메모리가 작은것이 큰것으로 바뀌는거 - 자동
+		area = r * r * 3.1415;
 		
 		System.out.println(area);
+		
+		//강제로 형변환 (변수타입)값 or (변수타입)변수 
+		//데이터손실이 있을수 있음
+		int iarea = (int)area;
+		System.out.println(iarea);
 	}
 
 }
