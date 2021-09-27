@@ -24,3 +24,8 @@
   - do-while, for
   - 반복문 중첩
   - 분기문(if, switch)
+
+6일차
+  - if --> else, else if
+  - switch
+  - break, continue
