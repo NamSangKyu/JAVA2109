@@ -29,3 +29,7 @@
   - if --> else, else if
   - switch
   - break, continue
+
+7일차
+  - 문제풀이
+  - 배열
