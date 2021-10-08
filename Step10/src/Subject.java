@@ -12,12 +12,13 @@
  */
 public class Subject {
 	String subjectName;
-	int score;
+	private int score;
 
 	//Alt + Shift + s --> o  필드 초기화하는 생성자
 	public Subject(String subjectName, int score) {
 		this.subjectName = subjectName;
-		this.score = score;
+		if(score >=0 && score <= 100)
+			this.score = score;
 	}
 	String getGrade() {
 		//성적 등급을 구해서 되돌려줌
