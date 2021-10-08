@@ -55,18 +55,26 @@ public class TV {
 	
 	public void volUp() {
 		if(!power) return; //메서드를 강제로 종료
+		if(mute) {
+			muteOnOff();
+			return;
+		}
 		if(vol < MAX_VOL)
 			vol++;
 		System.out.println("현재 음량 : "+vol);
 	}
 	public void volDown() {
 		if(!power) return; //메서드를 강제로 종료
+		if(mute) {
+			muteOnOff();
+			return;
+		}
 		if(vol > MIN_VOL)
 			vol--;
 		System.out.println("현재 음량 : "+vol);
 	}
 	
-	public void mute() {
+	public void muteOnOff() {
 		if(!power) return; //메서드를 강제로 종료
 		mute = !mute;
 		if(mute) 
