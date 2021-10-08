@@ -30,6 +30,7 @@ public class TV {
 	}
 
 	public void chUp() {
+		if(!power) return; //메서드를 강제로 종료
 		ch++;//채널이 최대값? 
 		if(ch > MAX_CH)
 			ch = MIN_CH;
@@ -37,6 +38,7 @@ public class TV {
 	}
 	
 	public void chDown() {
+		if(!power) return; //메서드를 강제로 종료
 		ch--;//채널이 최소값?
 		if(ch < MIN_CH)
 			ch = MAX_CH;
@@ -52,16 +54,26 @@ public class TV {
 	}
 	
 	public void volUp() {
+		if(!power) return; //메서드를 강제로 종료
 		if(vol < MAX_VOL)
 			vol++;
 		System.out.println("현재 음량 : "+vol);
 	}
 	public void volDown() {
+		if(!power) return; //메서드를 강제로 종료
 		if(vol > MIN_VOL)
 			vol--;
 		System.out.println("현재 음량 : "+vol);
 	}
 	
+	public void mute() {
+		if(!power) return; //메서드를 강제로 종료
+		mute = !mute;
+		if(mute) 
+			System.out.println("음소거가 활성화 되었습니다.");
+		else
+			System.out.println("음소거가 비활성화 되었습니다.");
+	}
 	public int getCh() {
 		return ch;
 	}
