@@ -20,7 +20,7 @@ public class Subject {
 		if(score >=0 && score <= 100)
 			this.score = score;
 	}
-	String getGrade() {
+	private String getGrade() {
 		//성적 등급을 구해서 되돌려줌
 		if(score >= 90)			return "A";
 		else if(score >= 80) 	return "B";
@@ -30,7 +30,7 @@ public class Subject {
 		
 	}
 	
-	void printSubjectInfo() {
+	public void printSubjectInfo() {
 		System.out.println("과목명 : "+subjectName);
 		System.out.println("점수 : "+score+"("+getGrade()+")");
 	}	
