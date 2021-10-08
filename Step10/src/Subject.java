@@ -11,8 +11,25 @@
  * 				과목명 점수 등급
  */
 public class Subject {
-	String subjectName;
+	private String subjectName;
 	private int score;
+	
+	public void setScore(int score) {
+		if(score >=0 && score <= 100)
+			this.score = score;
+	}
+	
+	public String getSubjectName() {
+		return subjectName;
+	}
+
+	public void setSubjectName(String subjectName) {
+		this.subjectName = subjectName;
+	}
+
+	public int getScore() {
+		return score;
+	}
 
 	//Alt + Shift + s --> o  필드 초기화하는 생성자
 	public Subject(String subjectName, int score) {
@@ -20,6 +37,7 @@ public class Subject {
 		if(score >=0 && score <= 100)
 			this.score = score;
 	}
+	
 	private String getGrade() {
 		//성적 등급을 구해서 되돌려줌
 		if(score >= 90)			return "A";
