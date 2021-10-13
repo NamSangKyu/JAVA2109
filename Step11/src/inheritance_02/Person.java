@@ -7,4 +7,7 @@ public class Person extends Animal{
 		System.out.println("Person 생성자");
 	}
 	
+	public void printPersonInfo() {
+		System.out.println("이 사람의 나이 : "+age);
+	}
 }
