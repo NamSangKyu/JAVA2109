@@ -48,3 +48,8 @@
   - 접근 제어자
   - setter / getter method
   - 클래스 모델링
+
+11일차
+  - static
+  - 싱글톤 패턴
+  - 상속
