@@ -1,6 +1,6 @@
 package inter_ex;
 
-public class Employee {
+public class Employee implements Pay{
 	private String name;
 	private String position;
 	public Employee(String name, String position) {
@@ -23,6 +23,10 @@ public class Employee {
 	
 	public void work() {
 		System.out.println(name + " 직원이 업무를 봅니다");
+	}
+	@Override
+	public void pay(int money) {
+		System.out.println(name + " 회사원은 월급으로 "+money +"원 받았습니다.");
 	}
 	
 	
