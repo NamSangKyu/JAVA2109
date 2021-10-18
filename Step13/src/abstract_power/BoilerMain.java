@@ -13,6 +13,12 @@ public class BoilerMain {
 		boiler.powerOnOff();
 		boiler.powerOnOff();
 		boiler.powerOnOff();
+		//익명 클래스
+		
 	}
 
 }
+
+
+
+
