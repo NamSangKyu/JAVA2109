@@ -14,7 +14,21 @@ public class BoilerMain {
 		boiler.powerOnOff();
 		boiler.powerOnOff();
 		//익명 클래스
-		
+		boiler.setOnOff(new PowerOnOff() {
+			private boolean power;
+			@Override
+			public void powerOnOff() {
+				power = !power;
+				
+				if(power)
+					System.out.println("전원 On");
+				else
+					System.out.println("전원 Off");
+					
+			}
+		});
+		boiler.powerOnOff();
+		boiler.powerOnOff();
 	}
 
 }
