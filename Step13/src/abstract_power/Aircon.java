@@ -1,6 +1,7 @@
 package abstract_power;
 
 public class Aircon extends PowerOnOff {
+	private boolean power;
 
 	@Override
 	public void powerOnOff() {
