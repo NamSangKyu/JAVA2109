@@ -15,5 +15,10 @@ public class ClassE implements B, C{
 	public void methodB() {
 		System.out.println("B");
 	}
+	@Override
+	public void method1() {
+		// TODO Auto-generated method stub
+		B.super.method1();
+	}
 
 }
