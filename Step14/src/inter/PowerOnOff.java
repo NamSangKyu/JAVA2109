@@ -17,3 +17,5 @@ public interface PowerOnOff {
 		System.out.println("전원 Off");
 	}
 }
+
+
