@@ -12,4 +12,8 @@ public interface PowerOnOff {
 	default void powerOn() {
 		System.out.println("전원 On");
 	}
+	//인터페이스에서 static 메서드 선언 가능
+	public static void powerOff() {
+		System.out.println("전원 Off");
+	}
 }
