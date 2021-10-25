@@ -52,6 +52,26 @@ public class PersonService {
 		}
 		System.out.println("검색한 데이터가 없습니다.");
 	}
+	public void deletePerson(Scanner sc) {
+		/*
+		 * 1. 삭제할 데이터 이름 입력
+		 * 2. 이름으로 배열 검색
+		 * 3-1. 동일한 이름이 있으면 삭제처리, 해당 index null 처리
+		 *		배열에 빈 공간이 있으면 X, index값 감소 
+		 * 3-2. 동일한 이름이 없으면 '삭제할 데이터가 없습니다.' 출력 
+		 */
+		System.out.println("Person 데이터 삭제를 시작합니다.......");
+		System.out.print("이름 입력 : ");
+		String name = sc.nextLine();
+		for(int i=0;i<index;i++) {
+			if(arr[i].getName().equals(name)) {
+				arr[i] = null;
+				
+				return;
+			}
+		}
+		System.out.println("삭제할 데이터가 없습니다.");
+	}
 }
 
 
