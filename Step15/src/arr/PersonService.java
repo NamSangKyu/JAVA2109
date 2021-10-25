@@ -19,12 +19,24 @@ public class PersonService {
 	}
 	
 	public void insertPerson(Scanner sc) {
-		/*
-		 * 1. 이름과 나이를 입력
-		 * 2. Person 생성
-		 * 3. 배열 arr에 생성한 객체를 저장
-		 * 4. index 증가
-		 */
+		if(arr.length == index) {
+			System.out.println("데이터 등록할 공간이 없습니다.");
+			return;//메서드를 강제 종료
+		}
+		System.out.println("Person 데이터를 등록합니다....");
+//		  1. 이름과 나이를 입력
+//		  		- 나이 입력 후 sc.nextline()을 작성
+		System.out.print("이름 입력 : ");
+		String name = sc.nextLine();
+		System.out.print("나이 입력 : ");
+		int age = sc.nextInt();
+		sc.nextLine();
+//		  2. Person 생성
+		Person p = new Person(name, age);
+//		  3. 배열 arr에 생성한 객체를 저장
+		arr[index] = p;
+//		  4. index 증가
+		index++;		 
 	}
 
 }
