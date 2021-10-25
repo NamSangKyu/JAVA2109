@@ -66,7 +66,10 @@ public class PersonService {
 		for(int i=0;i<index;i++) {
 			if(arr[i].getName().equals(name)) {
 				arr[i] = null;
-				
+				for(int j=i;j<index-1;j++) {
+					arr[j] = arr[j+1];
+				}
+				index--;
 				return;
 			}
 		}
