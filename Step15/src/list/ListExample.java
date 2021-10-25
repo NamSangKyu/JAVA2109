@@ -1,6 +1,7 @@
 package list;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ListExample {
 	/*
@@ -47,7 +48,15 @@ public class ListExample {
 		System.out.println(list);
 		
 		//리스트에 있는 모든 객체 꺼내기 - 1
+		for(int i=0;i<list.size();i++) {
+			System.out.println(list.get(i));
+		}
 		
+		//리스트에 있는 모든 객체 꺼내기 - 2
+		Iterator<String> it = list.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
 	}
 
 }
