@@ -14,14 +14,23 @@ public class ListExample {
 	 */
 	public static void main(String[] args) {
 		ArrayList<String> list = new ArrayList<String>();
-		//데이터 추가
+		//데이터 추가 - 순서대로 저장됨
 		list.add("HTML/CSS");
 		list.add("js/jQuery");
 		list.add("java");
-		list.add("HTML/CSS");
+		list.add("HTML/CSS");//중복된 데이터도 저장됨
 		list.add("jsp");
 		
 		System.out.println(list.toString());
+		//데이터 삭제 - 인덱스 번호로 삭제
+		list.remove(0);
+		System.out.println(list.toString());
+		//데이터 삭제 - 객체 비교 삭제
+		list.remove("java");
+		System.out.println(list.toString());
+		
+		//
+		
 	}
 
 }
