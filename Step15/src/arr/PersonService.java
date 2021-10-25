@@ -38,8 +38,29 @@ public class PersonService {
 //		  4. index 증가
 		index++;		 
 	}
+	public void searchPerson(Scanner sc) {
 
+		System.out.println("Person 데이터 검색을 시작합니다.......");
+		System.out.print("이름 입력 : ");
+		String name = sc.nextLine();
+		
+		for(int i=0;i<index;i++) {
+			if(arr[i].getName().equals(name)) {
+				System.out.println(arr[i].toString());
+				return;
+			}
+		}
+		System.out.println("검색한 데이터가 없습니다.");
+	}
 }
+
+
+
+
+
+
+
+
 
 
 
