@@ -11,10 +11,13 @@ public class Lotto {
 		//로또 번호 1~45까지 6개의 번호를 뽑음, 중복된 번호 X
 		Random r = new Random();
 		TreeSet<Integer> set = new TreeSet<Integer>();
-		while(set.size() < 6) {
-			set.add(r.nextInt(45) + 1); // x % 45 + 1 ---> 1 ~ 45 
+		for(int i=0;i<5;i++) {
+			while(set.size() < 6) {
+				set.add(r.nextInt(45) + 1); // x % 45 + 1 ---> 1 ~ 45 
+			}
+			System.out.println(set);
+			set.clear();
 		}
-		System.out.println(set);
 	}
 
 }
