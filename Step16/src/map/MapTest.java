@@ -1,6 +1,8 @@
 package map;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 
 public class MapTest {
 	/*
@@ -22,7 +24,32 @@ public class MapTest {
 		System.out.println(map.get("Kim"));
 		System.out.println(map.get("Lee"));
 		
+		//맵에 저장된 데이터 개수
+		System.out.println(map.size());
 		
+		//해당값으로 키 값이 있는지 체크
+		System.out.println(map.containsKey("Lee"));//Lee 라는 키값이 있냐?
+		//저장된값이 있는지 체크
+		System.out.println(map.containsValue(45));//저장된 값중에 45가 있느냐? (키값 검색X)
+		
+		//데이터 삭제
+		map.remove("Lee");
+		System.out.println(map);
+		
+		//전체 데이터 삭제
+		//map.clear();
+		
+		//맵에 데이터가 없는지?
+		System.out.println(map.isEmpty());
+		
+		//맵에 있는 키값을 Set로 받음
+		Set<String> key = map.keySet();
+		//맵에 있는 전체 내용 출력
+		Iterator<String> it = key.iterator();
+		while(it.hasNext()) {
+			String k = it.next();
+			System.out.println(k + " " + map.get(k));
+		}
 	}
 
 }
