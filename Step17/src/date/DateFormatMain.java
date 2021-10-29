@@ -31,6 +31,25 @@ public class DateFormatMain {
 		System.out.println(sdf.format(cal.getTime()));
 		sdf.applyPattern("dd"); //일 : 두자리
 		System.out.println(sdf.format(cal.getTime()));
+		sdf.applyPattern("E");// 요일 : 한자리
+		System.out.println(sdf.format(cal.getTime()));
+		sdf.applyPattern("EEEE");// 요일 : 풀네임
+		System.out.println(sdf.format(cal.getTime()));
+		//시간
+		sdf.applyPattern("H"); //24시간 기준
+		System.out.println(sdf.format(cal.getTime()));
+		sdf.applyPattern("HH");
+		System.out.println(sdf.format(cal.getTime()));
+		sdf.applyPattern("KK"); //12시간 기준
+		System.out.println(sdf.format(cal.getTime()));
+		sdf.applyPattern("mm");
+		System.out.println(sdf.format(cal.getTime()));
+		sdf.applyPattern("ss");
+		System.out.println(sdf.format(cal.getTime()));
+		
+		sdf.applyPattern("yyyy-MM-dd HH:mm:ss");
+		System.out.println(sdf.format(cal.getTime()));
+		
 		
 		
 	}
