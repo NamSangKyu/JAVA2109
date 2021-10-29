@@ -1,0 +1,13 @@
+**Exception 처리(예외 처리)**
+
+compile error : 컴파일 시 발생하는 에러
+Exception ,Runtime Error : 실행시 발생하는 예외 및 에러
+
+프로그램 수행시  Exception이 발생해도 강제 종료되지 않게 적절하게 대처하여
+프로그램을 정상적으로 수행하도록 한다.
+
+	try : Exception 발생 예상 지점
+	catch : try에서 발생한 Exception을 처리하는 부분
+	finally : Exception 발생 여부와 상관 없이 실행되는 영역
+	throw
+	throws
