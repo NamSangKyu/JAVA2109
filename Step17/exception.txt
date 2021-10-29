@@ -9,5 +9,5 @@ Exception ,Runtime Error : 실행시 발생하는 예외 및 에러
 	try : Exception 발생 예상 지점
 	catch : try에서 발생한 Exception을 처리하는 부분
 	finally : Exception 발생 여부와 상관 없이 실행되는 영역
-	throw
-	throws
+	throw 
+	throws : Exception 발생하면 해당 메서드를 호출한 쪽으로 Exception을 넘겨줌

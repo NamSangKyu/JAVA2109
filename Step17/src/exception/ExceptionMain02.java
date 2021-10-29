@@ -5,13 +5,18 @@ import java.util.Scanner;
 public class ExceptionMain02 {
 	//메서드
 	//숫자 두개를 매개변수로 받아서 나눈 결과를 리턴하는 메서드
-	public static int division(int n1, int n2) {
+//	public static int division(int n1, int n2) {
+//		int result = 0;
+//		try {
+//			result = n1 / n2;
+//		}catch (ArithmeticException e) {
+//			System.out.println("0으로 나눌수 없습니다.");
+//		}
+//		return result;
+//	}
+	public static int division(int n1, int n2) throws ArithmeticException {
 		int result = 0;
-		try {
-			result = n1 / n2;
-		}catch (ArithmeticException e) {
-			System.out.println("0으로 나눌수 없습니다.");
-		}
+		result = n1 / n2;
 		return result;
 	}
 	public static void main(String[] args) {
@@ -24,8 +29,12 @@ public class ExceptionMain02 {
 		n2 = sc.nextInt();
 		
 		//위에 만든 메서드를 호출해서 나눈 결과를 받고 출력
-		int result = division(n1, n2);
-		System.out.println(result);
+		try {
+			int result = division(n1, n2);
+			System.out.println(result);
+		}catch (ArithmeticException e) {
+			System.out.println("0으로 나눌수 없습니다.");
+		}
 	}
 
 }
