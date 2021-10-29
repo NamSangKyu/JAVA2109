@@ -2,6 +2,7 @@ package date;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 import java.util.TimeZone;
 
 public class DateFormatMain {
@@ -48,6 +49,8 @@ public class DateFormatMain {
 		System.out.println(sdf.format(cal.getTime()));
 		
 		sdf.applyPattern("yyyy-MM-dd HH:mm:ss");
+		System.out.println(sdf.format(cal.getTime()));
+		sdf.applyPattern("yyyy년 MMM dd일 HH시 mm분 ss초");
 		System.out.println(sdf.format(cal.getTime()));
 		
 		
