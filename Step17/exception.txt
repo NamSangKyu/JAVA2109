@@ -11,3 +11,14 @@ Exception ,Runtime Error : 실행시 발생하는 예외 및 에러
 	finally : Exception 발생 여부와 상관 없이 실행되는 영역
 	throw : 원하는 Exception을 강제로 발생 시킴
 	throws : Exception 발생하면 해당 메서드를 호출한 쪽으로 Exception을 넘겨줌
+	
+사용자 정의 Exception Class
+	사용자가 직접 Exception 클래스를 작성
+	클래스 작성시 Exception 클래스를 상속받으면 됨
+	
+	
+	
+	
+	
+	
+	
