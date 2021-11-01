@@ -15,5 +15,4 @@ public class ThreadRun extends Thread{
 		System.out.println(getName() + " - 스레드 종료");
 	}
 	
-	
 }
