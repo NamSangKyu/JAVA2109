@@ -3,6 +3,8 @@ package file;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Notepade {
@@ -27,6 +29,10 @@ public class Notepade {
 				pw.println(str);
 				pw.flush();
 			}
+			Calendar cal = Calendar.getInstance();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+			pw.println(sdf.format(cal.getTime())+" 저장");
+			pw.flush();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}finally {
