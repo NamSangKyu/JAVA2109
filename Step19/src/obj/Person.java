@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Person implements Serializable{
 	private String name;
 	private int age;
-	private int money;
+	private transient int money;//직렬화 대상에서 제외, 파일 저장 X
 	
 	public Person(String name, int age, int money) {
 		super();
