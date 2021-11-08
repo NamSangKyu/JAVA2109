@@ -14,7 +14,7 @@ public class OneChatClientMain {
 		Scanner sc = new Scanner(System.in);
 
 		try {
-			server = new Socket("127.0.0.1",1234);
+			server = new Socket("192.168.1.101",1234);
 			//스레드 실행
 			ReceiveMessageWorker worker = new ReceiveMessageWorker(server);
 			worker.start();
@@ -28,6 +28,7 @@ public class OneChatClientMain {
 				pw.flush();
 				if(msg.equals("exit")) break;
 			}
+			server.close();
 			worker.stop();
 		} catch (IOException e) {
 			e.printStackTrace();
